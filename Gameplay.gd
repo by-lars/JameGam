@@ -9,10 +9,10 @@ onready var label = $"UI/MarginContainer/Label"
 func _ready():
 	arrRand.resize(6)
 	for n in 6:
+		randomize()
 		arrRand[n] = randi()%9+1
 		print(arrRand[n])
-		label.text = "CALL NOW: " + PoolStringArray(arrRand).join("")
-	#arrGuess.resize(6)
+	label.text = "CALL NOW: " + PoolStringArray(arrRand).join("")
 
 func _on_Phone_button_pressed(button):
 	print(button)
@@ -25,6 +25,7 @@ func _on_Phone_button_pressed(button):
 		i = 0
 		return
 	i += 1
+	# HIER CORRECT BUTTON GREEN
 	if i == 6:
 		print("you won!")
 
