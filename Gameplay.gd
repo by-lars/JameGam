@@ -1,7 +1,29 @@
 extends Spatial
 
+var arrRand := []
+var arrGuess := []
+var i := 0
+
+func _ready():
+	arrRand.resize(6)
+	for n in 6:
+		arrRand[n] = randi()%9+1
+		print(arrRand[n])
+	#arrGuess.resize(6)
+
 func _on_Phone_button_pressed(button):
 	print(button)
+	if button == 10 || button == 11:
+		return
+	arrGuess.append(button)
+	i += 1
+	if i == 6:
+		print("full")
+		for n in 6:
+			if arrRand[n] != arrGuess[n]:
+				print("false")
+				return
+			
 
 func _menu_on_button_pressed(button):
 	get_tree().change_scene("Intro.tscn")
