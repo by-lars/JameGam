@@ -17,6 +17,8 @@ func _ready():
 #func _process(delta):
 #	pass
 
+func tween_completed ( Object object, NodePath key ):
+	pass
 
 
 func _on_Keypad_input_event(camera, event, position, normal, shape_idx, extra_arg_0):
