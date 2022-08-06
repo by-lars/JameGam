@@ -4,11 +4,14 @@ var arrRand := []
 var arrGuess := []
 var i := 0
 
+onready var label = $"UI/MarginContainer/Label"
+
 func _ready():
 	arrRand.resize(6)
 	for n in 6:
 		arrRand[n] = randi()%9+1
 		print(arrRand[n])
+		label.text = "CALL NOW: " + PoolStringArray(arrRand).join("")
 	#arrGuess.resize(6)
 
 func _on_Phone_button_pressed(button):
