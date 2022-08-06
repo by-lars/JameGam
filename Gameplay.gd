@@ -16,14 +16,14 @@ func _on_Phone_button_pressed(button):
 	if button == 10 || button == 11:
 		return
 	arrGuess.append(button)
+	if arrRand[i] != arrGuess[i]:
+		print("false, try again")
+		arrGuess = []
+		i = 0
+		return
 	i += 1
 	if i == 6:
-		print("full")
-		for n in 6:
-			if arrRand[n] != arrGuess[n]:
-				print("false")
-				return
-			
+		print("you won!")
 
 func _menu_on_button_pressed(button):
 	get_tree().change_scene("Intro.tscn")
