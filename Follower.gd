@@ -1,10 +1,8 @@
 extends Camera
 
 onready var target = get_parent().get_node("Path/PathFollow/Phone")
-var speed = 0.5
+var speed = 10
 
-func _ready():
-	pass
 	
 func _process(delta):
 	var T = global_transform.looking_at(target.global_transform.origin, Vector3(0,1,0))
