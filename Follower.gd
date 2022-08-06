@@ -1,12 +1,15 @@
 extends Camera
 
 onready var target = get_parent().get_node("Phone")
-var speed : float
+var speed = 0.5
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	speed = 0.5
-	
+	pass
 	
 func _process(delta):
-	look_at(target.global_transform.origin, Vector3.UP)
+	var T = global_transform.looking_at(target.global_transform.origin, Vector3(0,1,0))
+	global_transform.basis.y=lerp(global_transform.basis.y, T.basis.y, delta*speed)
+	global_transform.basis.x=lerp(global_transform.basis.x, T.basis.x, delta*speed)
+	global_transform.basis.z=lerp(global_transform.basis.z, T.basis.z, delta*speed)
+	
+
