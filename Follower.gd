@@ -10,4 +10,5 @@ func _process(delta):
 	global_transform.basis.x=lerp(global_transform.basis.x, T.basis.x, delta*speed)
 	global_transform.basis.z=lerp(global_transform.basis.z, T.basis.z, delta*speed)
 	
+	fov = 80 - global_transform.origin.distance_to(target.global_transform.origin)
 
