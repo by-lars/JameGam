@@ -5,20 +5,7 @@ extends Spatial
 # var a = 2
 # var b = "text"
 
-onready var key1 = $"RootNode/Key"
-onready var key2 = $"RootNode/Key004"
-onready var key3 = $"RootNode/Key008"
-onready var key4 = $"RootNode/Key001"
-onready var key5 = $"RootNode/Key005"
-onready var key6 = $"RootNode/Key009"
-onready var key7 = $"RootNode/Key007"
-onready var key8 = $"RootNode/Key006"
-onready var key9 = $"RootNode/Key010"
-onready var key0 = $"RootNode/Key007"
-onready var keyHash = $"RootNode/Key011"
-onready var keyStar = $"RootNode/Key003"
-
-
+onready var keys = [$"RootNode/Key007", $"RootNode/Key", $"RootNode/Key004", $"RootNode/Key008", $"RootNode/Key001", $"RootNode/Key005", $"RootNode/Key009", $"RootNode/Key002", $"RootNode/Key006", $"RootNode/Key010", $"RootNode/Key003", $"RootNode/Key011"]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -34,5 +21,7 @@ func _ready():
 
 func _on_Keypad_input_event(camera, event, position, normal, shape_idx, extra_arg_0):
 	if event is InputEventMouseButton:
+		var obj = keys[extra_arg_0]
+		$Tween.interpolate_property(obj, "global_transform:origin", obj.global_transform.origin, obj.global_transform.origin - (Vector3.UP * 0.05), 0.5, Tween.TRANS_BACK, Tween.EASE_IN_OUT)		
+		$Tween.start()
 		print("press")
-		print(extra_arg_0)
