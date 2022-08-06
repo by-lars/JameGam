@@ -1,6 +1,6 @@
 extends Camera
 
-onready var target = get_parent().get_node("Phone")
+onready var target = get_parent().get_node("Path/PathFollow/Phone")
 var speed = 0.5
 
 func _ready():
