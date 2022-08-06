@@ -12,8 +12,8 @@ var CALL_NOW_TEXT = "CALL NOW: "
 
 func _ready():
 	arrRand.resize(6)
+	randomize()
 	for n in 6:
-		randomize()
 		arrRand[n] = randi()%9+1
 		print(arrRand[n])
 	label.set_bbcode("[center]" + CALL_NOW_TEXT + PoolStringArray(arrRand).join("") + "[/center]")
@@ -36,17 +36,16 @@ func _on_Phone_button_pressed(button):
 	
 	label.set_bbcode("[center]" + CALL_NOW_TEXT)
 	
+	label.push_color(Color(0, 1, 0))
 	for n in i:
-		label.push_color(Color(0, 1, 0))
 		label.append_bbcode(String(arrRand[n]))
-		label.pop()
+	label.pop()
 
+	label.push_color(Color(1, 1, 1))
 	for n in range(i, 6):
-		label.push_color(Color(1, 1, 1))
 		label.append_bbcode(String(arrRand[n]))
-		label.pop()
+	label.pop()
 
-	# HIER CORRECT BUTTON GREEN
 	if i == 6:
 		i = 0
 		arrGuess.clear()
