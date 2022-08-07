@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/346641__inspectorj__rain-on-windows-interior-b.wav-332188612ea3890a29389b48a927072d.sample"
+
+[deps]
+
+source_file="res://Audio/346641__inspectorj__rain-on-windows-interior-b.wav"
+dest_files=[ "res://.import/346641__inspectorj__rain-on-windows-interior-b.wav-332188612ea3890a29389b48a927072d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0

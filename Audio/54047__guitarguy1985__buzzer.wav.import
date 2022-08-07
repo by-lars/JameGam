@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/54047__guitarguy1985__buzzer.wav-e9a5c1b87e447607d318fc35c71c65d9.sample"
+
+[deps]
+
+source_file="res://Audio/54047__guitarguy1985__buzzer.wav"
+dest_files=[ "res://.import/54047__guitarguy1985__buzzer.wav-e9a5c1b87e447607d318fc35c71c65d9.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

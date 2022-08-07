@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/4.mp3-c27a6086316ce1f6d3150f0e069f8f60.mp3str"
+
+[deps]
+
+source_file="res://Audio/ohno/4.mp3"
+dest_files=[ "res://.import/4.mp3-c27a6086316ce1f6d3150f0e069f8f60.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

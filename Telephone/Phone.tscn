@@ -627,6 +627,8 @@ transform = Transform( 2.69662e-05, -1.70725, -0.0454582, 1.70723, 8.95497e-06, 
 mesh = SubResource( 31 )
 material/0 = ExtResource( 2 )
 
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RootNode"]
+
 [node name="Area" type="Area" parent="."]
 transform = Transform( 0.393898, -1.94366e-08, 0.0892862, -0.184082, -5.1831e-08, 0.191054, 5.44582e-15, -0.43479, -2.51398e-08, 0.138095, 0.669877, 0.219793 )
 
